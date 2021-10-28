@@ -60,12 +60,13 @@ function showFile(){
   }
 }
 
+//let imagine = document.querySelector("img"); that's how i was doing 
 var filterControls = document.querySelectorAll('input[type=range]');
 function applyFilter() {
     var computedFilters = '';
 	filterControls.forEach(function(item) {
         computedFilters+= item.getAttribute('data-filter') + '(' + item.value + item.getAttribute('data-scale') + ') ';
 	});
-    let imagine = document.querySelector("img");
+    let imagine = document.querySelector("img");// i did not declared the variable inside of the function so it could not defined it
 	imagine.style.filter = computedFilters;
 };
